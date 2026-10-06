@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BeforePay — Check before you pay</title>
+<meta name="description" content="Check online deals for warning signs before you send money.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+<a class="brand" href="#top"><i></i>BeforePay</a>
+<nav><a href="#check">Check a Deal</a><a href="#how">How it works</a><a href="#report">Report</a><a href="#faq">FAQ</a></nav>
+<a class="navbtn" href="#check">Check now</a>
+</header>
+<main id="top">
+<section class="hero">
+<div>
+<small>TRUST BEFORE TRANSACTION</small>
+<h1>Check before<br><em>you pay.</em></h1>
+<p>BeforePay helps you spot common warning signs in online deals before your money leaves your hands.</p>
+<div class="actions"><a class="btn dark" href="#check">Check a deal →</a><a class="btn lightbtn" href="#how">See how it works</a></div>
+<div class="ticks">✓ Free to start &nbsp;&nbsp; ✓ No card required &nbsp;&nbsp; ✓ Mobile friendly</div>
+</div>
+<div class="preview">
+<div class="tiny">DEAL PREVIEW <span>● LIVE</span></div>
+<h2>Unknown seller</h2><p>example-marketplace.com</p>
+<div class="bar"><b></b></div><div class="scoreline"><strong>Risk score</strong><strong>62 / 100</strong></div>
+<div class="warning"><strong>!</strong><div><b>Proceed with caution</b><small>Several details need verification before payment.</small></div></div>
+<div class="row">Seller footprint <b>Needs review</b></div><div class="row">Payment method <b>High risk</b></div>
+</div>
+</section>
+<section class="stepsbar"><div><b>01</b> Submit the deal</div><div><b>02</b> Check red flags</div><div><b>03</b> Decide before paying</div></section>
+
+<section id="check" class="section">
+<div class="heading"><small>DEAL CHECK</small><h2>What are you about to buy?</h2><p>Enter the details you have. This MVP provides a preliminary, rule-based screening—not a guarantee that a person or business is legitimate.</p></div>
+<form id="dealForm" class="card">
+<div class="two"><label>Seller / business name<input id="seller" required placeholder="ABC Electronics"></label><label>Amount at risk<input id="amount" type="number" min="0" placeholder="250"></label></div>
+<div class="two"><label>Website or social link<input id="link" type="url" placeholder="https://..."></label><label>Phone / contact (optional)<input id="phone" placeholder="+1 ..."></label></div>
+<label>What are you buying?<textarea id="item" required placeholder="Describe the item, service, investment or deal..."></textarea></label>
+<label>What makes you unsure?<textarea id="concern" placeholder="Urgency, unusual payment request, price, seller behavior..."></textarea></label>
+<div class="notice"><b>Privacy:</b> Never enter passwords, card numbers, PINs, OTP codes, gift-card codes or private keys.</div>
+<button class="btn dark full" type="submit">Run preliminary check →</button>
+</form>
+<div id="result" class="card result hidden">
+<div class="resulttop"><div><small>PRELIMINARY RESULT</small><h2 id="resultTitle">Proceed with caution</h2></div><strong id="score">—</strong></div>
+<p id="summary"></p><div id="flags"></div>
+<div class="actions"><button class="btn lightbtn" id="newCheck">New check</button><button class="btn dark" id="print">Print / Save report</button></div>
+<small class="disclaimer">Educational screening only. Verify independently before sending money.</small>
+</div>
+</section>
+
+<section id="how" class="section pale"><div class="heading"><small>HOW IT WORKS</small><h2>Three simple steps.</h2></div>
+<div class="cards"><article><b>01</b><h3>Describe the deal</h3><p>Tell us what you're buying, who is selling it and how much is at risk.</p></article>
+<article><b>02</b><h3>Spot warning signs</h3><p>BeforePay highlights common patterns that deserve extra verification.</p></article>
+<article><b>03</b><h3>Decide carefully</h3><p>Slow down and use safer payment methods when possible.</p></article></div></section>
+
+<section id="report" class="section"><div class="heading"><small>COMMUNITY REPORTS</small><h2>Seen a suspicious deal?</h2><p>Save a factual report in this browser. A future version can send moderated reports to a secure database.</p></div>
+<form id="reportForm" class="card smallcard"><div class="two"><label>Seller / business<input id="reportSeller" required></label><label>Website / profile<input id="reportLink" type="url"></label></div>
+<label>What happened?<textarea id="reportText" required></textarea></label><button class="btn dark" type="submit">Save report locally</button><p id="saved" class="success hidden">Saved on this device.</p></form></section>
+
+<section id="faq" class="section pale"><div class="heading"><small>FAQ</small><h2>Questions, answered.</h2></div><div class="faq">
+<details><summary>Does a low-risk result mean the seller is safe?</summary><p>No. A screening can miss fraud. Always verify independently.</p></details>
+<details><summary>Does BeforePay guarantee refunds?</summary><p>No. BeforePay is an educational screening tool, not insurance or escrow.</p></details>
+<details><summary>What should I never submit?</summary><p>Passwords, card numbers, OTPs, gift-card redemption codes, private keys and other secrets.</p></details>
+<details><summary>How can this become a real business?</summary><p>Future versions can add public-web checks, verified business profiles, paid detailed reports and business subscriptions.</p></details>
+</div></section>
+
+<section class="cta"><div><small>BEFORE THE MONEY MOVES</small><h2>Pause. Check. Then decide.</h2></div><a class="btn dark" href="#check">Check a deal →</a></section>
+</main>
+<footer><div class="brand"><i></i>BeforePay</div><span>© 2026 BeforePay MVP</span><span>Educational tool only.</span></footer>
+<script src="app.js"></script>
+</body></html>
